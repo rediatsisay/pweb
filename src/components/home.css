@@ -1,0 +1,76 @@
+#home {
+  display: flex;
+  height: calc(100vh - 4rem);
+  max-width: 75rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.bg {
+  position: absolute;
+  right: 4rem;
+  top: 10rem;
+  flex: 1;
+  object-fit: cover;
+  border-radius: 15px; /* Adjusted border-radius for a little curve */
+  filter: brightness(80%) contrast(120%);
+  transition: filter 0.5s ease, border-color 0.5s ease;
+  border: 9px solid #0b1529;
+  box-sizing: border-box;
+  max-width: 40%; /* Adjusted max-width for a smaller image */
+  
+  height: 60vh;
+  width: 50vh;
+}
+
+/* Hover effect */
+.bg:hover {
+  filter: brightness(100%) contrast(100%);
+  border-color: rgb(133, 73, 73);
+}
+
+.introcontent {
+  flex: 1;
+  padding: 2rem;
+  font-size: 2rem; /* Adjusted font size */
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hello {
+  font-size: 1.5rem; /* Adjusted font size */
+  font-weight: 100;
+}
+
+.introName {
+  color: yellow;
+}
+
+.introPara {
+  font-size: 1.2rem; /* Adjusted font size */
+  font-weight: 100;
+  margin-top: 1rem; /* Added margin-top for better spacing */
+}
+
+.btn {
+  background: white;
+  margin: 1rem 0;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  #home {
+    flex-direction: column;
+  }
+
+  .bg {
+    width: 100%;
+    max-width: 100%; /* Adjusted max-width for smaller screens */
+    height: 50vh; /* Adjusted height for smaller screens */
+    border-radius: 0; /* Removed border-radius for smaller screens */
+  }
+}
